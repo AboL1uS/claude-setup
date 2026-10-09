@@ -44,3 +44,8 @@
 ### Наблюдения из `/context`
 - MCP-инструменты с пометкой «deferred» (Figma, Google Drive и т.п. из коннекторов claude.ai) в итоговый расход не входят — грузятся только по запросу.
 - Скиллы плагина `design:*` приходят не из локальных плагинов (их нет в `claude plugin list`) — вероятно, из claude.ai; при желании отключать там.
+
+## 2026-10-09 — режим плана в VS Code
+- В расширении VS Code новые чаты открывались в режиме Auto, несмотря на `defaultMode: plan` в `~/.claude/settings.json`.
+- Исправлено настройкой расширения `"claudeCode.initialPermissionMode": "plan"` в `%APPDATA%\Code\User\settings.json`.
+- На предложение «Make auto mode your default» отвечать «No, keep plan mode».
