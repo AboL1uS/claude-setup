@@ -34,7 +34,7 @@ Taste Skill: скопировать `C:\Users\Ali\.claude\skill-library\design-t
 | `/rewind` или Esc Esc | откатить чат и правки файлов |
 | `/model`, `/effort high` | сменить модель / глубину рассуждений |
 | `/code-review`, `/security-review`, `/simplify` | проверки кода |
-| `/agents` | список сабагентов |
+| «Какие сабагенты тебе доступны?» | проверить сабагентов (команды `/agents` больше нет; файлы — `~/.claude/agents/`) |
 | `/rename` | переименовать чат |
 | `/resume` | вернуться к старому чату |
 
