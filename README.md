@@ -43,7 +43,7 @@ Taste Skill: скопировать `C:\Users\Ali\.claude\skill-library\design-t
 1. Установить Claude Code, Git и Node.js, войти в Claude Code своим аккаунтом.
 2. Скачать настройку:
    ```
-   git clone https://github.com/<твой-логин>/claude-setup
+   git clone https://github.com/AboL1uS/claude-setup
    cd claude-setup
    ```
 3. Установить:
