@@ -1,0 +1,6 @@
+{
+  "marketplaces": ["anthropics/claude-plugins-official", "pbakaus/impeccable"],
+  "enabled": ["claude-code-setup@claude-plugins-official","context7@claude-plugins-official","session-report@claude-plugins-official","claude-md-management@claude-plugins-official"],
+  "disabled": ["impeccable@impeccable","playwright@claude-plugins-official","typescript-lsp@claude-plugins-official","pyright-lsp@claude-plugins-official","security-guidance@claude-plugins-official","commit-commands@claude-plugins-official"],
+  "disabledSynced": ["figma@synced","brightdata-plugin@synced","desktop-commander@synced"]
+}

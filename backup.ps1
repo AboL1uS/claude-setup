@@ -1,4 +1,4 @@
-# Обновляет config-backup/ копиями живых файлов из ~/.claude
+﻿# Обновляет config-backup/ копиями живых файлов из ~/.claude
 $src = Join-Path $env:USERPROFILE ".claude"
 $dst = Join-Path $PSScriptRoot "config-backup"
 
@@ -11,3 +11,10 @@ if (Test-Path (Join-Path $src "skill-library")) {
     Copy-Item (Join-Path $src "skill-library\*") (Join-Path $dst "skill-library") -Recurse -Force
 }
 Write-Output "Backup updated: $dst"
+
+# Обновить plugins.json из `claude plugin list --json`
+if (Get-Command node -ErrorAction SilentlyContinue) {
+    node (Join-Path $PSScriptRoot "lib\export-plugins.js") (Join-Path $PSScriptRoot "plugins.json")
+} else {
+    Write-Output "node не найден, plugins.json не обновлён"
+}

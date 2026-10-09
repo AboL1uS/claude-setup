@@ -38,10 +38,28 @@ Taste Skill: скопировать `C:\Users\Ali\.claude\skill-library\design-t
 | `/rename` | переименовать чат |
 | `/resume` | вернуться к старому чату |
 
-## Резервная копия
+## Новое устройство
 
-`config-backup/` — копия настроек. Обновить: `powershell -File backup.ps1`. Восстановить — скопировать файлы обратно в `C:\Users\Ali\.claude\`.
+1. Установить Claude Code, Git и Node.js, войти в Claude Code своим аккаунтом.
+2. Скачать настройку:
+   ```
+   git clone https://github.com/<твой-логин>/claude-setup
+   cd claude-setup
+   ```
+3. Установить:
+   - Windows: `powershell -ExecutionPolicy Bypass -File install.ps1`
+   - Linux: `bash install.sh`
+4. Новый чат → `/mcp` → авторизовать context7.
+
+Скрипт можно запускать сколько угодно раз — он же служит для обновления. Перед изменениями он сохраняет старые настройки в `~/.claude/backup-<дата>/`. Посмотреть, что он сделает, без изменений: `-DryRun` / `--dry-run`.
+
+## Синхронизация между ноутбуками
+
+- Поменял настройку на одном ноутбуке → в этой папке: `backup.ps1` (или `bash backup.sh`), затем `git add -A`, `git commit -m "..."`, `git push`. Проще — попросить Claude в этом проекте.
+- На другом ноутбуке: `git pull`, затем `install.ps1` / `install.sh`.
+
+Само приходит через аккаунт claude.ai (ставить не нужно): Figma, Bright Data, Desktop Commander, Fleet, коннекторы Figma и Google Drive.
 
 ## Исходный чат
 
-Чат, в котором всё настраивалось, был запущен из `C:\Users\Ali` — вернуться к нему: в VS Code открыть `C:\Users\Ali` → история чатов Claude, или в терминале `cd C:\Users\Ali; claude --resume`. Копия лежит в `chat-archive/`.
+Чат настройки перенесён в этот проект: открыть эту папку в VS Code → история чатов Claude. Его копия (`chat-archive/*.jsonl`) хранится только локально и в GitHub не отправляется.
