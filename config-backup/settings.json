@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "claude-code-setup@claude-plugins-official": true,
+    "brightdata-plugin@synced": false,
+    "desktop-commander@synced": false,
+    "figma@synced": false,
+    "impeccable@impeccable": false,
+    "context7@claude-plugins-official": true,
+    "session-report@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "playwright@claude-plugins-official": false,
+    "typescript-lsp@claude-plugins-official": false,
+    "pyright-lsp@claude-plugins-official": false,
+    "security-guidance@claude-plugins-official": false,
+    "commit-commands@claude-plugins-official": false
+  },
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "effortLevel": "medium",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "theme": "dark"
+}
